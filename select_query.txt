@@ -81,3 +81,22 @@ SELECT DISTINCT videogame_id
 FROM videogames_db.reviews
 WHERE rating = '5';
 ```
+
+BONUS
+11. Selezionare il numero e la media delle recensioni per il videogioco con ID = 412 (review number = 12, avg_rating = 3.16 circa)
+
+```sql
+SELECT COUNT(*), AVG(rating)
+FROM videogames_db.reviews
+WHERE videogame_id = 412;
+
+```
+
+12. Selezionare il numero di videogame che la software house con ID = 1 ha rilasciato nel 2018 (13)
+
+```sql
+SELECT COUNT(*), AVG(rating)
+FROM videogames_db.videogame
+WHERE software_house._id = 1 AND YEAR (release_date) = 2016
+
+```
